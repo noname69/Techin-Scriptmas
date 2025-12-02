@@ -3,6 +3,14 @@ interface CountdownResult {
   totalSeconds: number;
 }
 
+/**
+ * Function calculates the total minutes and total seconds passed since midnight
+ * @param hours 
+ * @param minutes 
+ * @returns total minutes and total seconds since midnight
+ * @throws Error if inputs are invalid
+ */
+
 function midnightClockCountdown(
   hours: number,
   minutes: number
@@ -22,6 +30,10 @@ function midnightClockCountdown(
 
   return { totalMinutes, totalSeconds };
 }
+
+/**
+ * Function to show help message
+ */
 
 function showHelp() {
   console.log("Usage:");
