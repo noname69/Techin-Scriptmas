@@ -7,22 +7,20 @@ function calculateTotalSantaCost(length: number, width: number, m2price: number)
 }
 
 function showHelp() {
-  console.log("Some help")
+  console.log("Usage:")
+  console.log("npx ts-node santa_tilling_problem.ts lenght width m2price")
+  console.log("where lenght, width, m2price are numbers")
 }
 
 const args = process.argv.slice(2);
-console.log(args)
 
 if (args.length !== 3) {
-  
   console.error("Need 3 arguments: lenght, width, price for squere meter");
   showHelp();
   process.exit(1);
 }
 
-const lenght = Number(args[0]);
-const width = Number(args[1]);
-const m2price = Number(args[2]);
+const [lenght, width, m2price] = args.map(Number) as [number, number, number]
 
 if (isNaN(lenght) || isNaN(width) || isNaN(m2price)) {
   console.error("Arguments should be numbers");
