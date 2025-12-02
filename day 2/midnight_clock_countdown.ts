@@ -63,8 +63,8 @@ if (isNaN(hoursOnClock) || isNaN(minutesOnClock)) {
 // Calculate and display the countdown after midnight
 try {
   const result = midnightClockCountdown(hoursOnClock, minutesOnClock);
-  console.log(`Total minutes until midnight: ${result.totalMinutes}`);
-  console.log(`Total seconds until midnight: ${result.totalSeconds}`);
+  console.log(`Total minutes since midnight: ${result.totalMinutes}`);
+  console.log(`Total seconds since midnight: ${result.totalSeconds}`);
 } catch (error) {
   if (error instanceof Error) {
     console.error("Error:", error.message);
