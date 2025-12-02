@@ -42,6 +42,7 @@ function showHelp() {
   console.log("Hours: 0-23, minutes: 0-59");
 }
 
+// Get command line arguments and validate
 const args = process.argv.slice(2);
 
 if (args.length !== 2) {
@@ -58,6 +59,8 @@ if (isNaN(hoursOnClock) || isNaN(minutesOnClock)) {
   process.exit(1);
 }
 
+
+// Calculate and display the countdown after midnight
 try {
   const result = midnightClockCountdown(hoursOnClock, minutesOnClock);
   console.log(`Total minutes until midnight: ${result.totalMinutes}`);
