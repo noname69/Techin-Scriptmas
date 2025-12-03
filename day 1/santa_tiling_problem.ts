@@ -12,6 +12,10 @@ export function calculateTotalSantaCost(
   width: number,
   m2price: number
 ): number {
+  if (isNaN(length) || isNaN(width) || isNaN(m2price)) {
+    throw new Error("All inputs must be numbers");
+  }
+
   if (length <= 0 || width <= 0 || m2price < 0) {
     throw new Error(
       "Length and width must be positive numbers, price cannot be negative"

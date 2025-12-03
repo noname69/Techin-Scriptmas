@@ -5,8 +5,8 @@ import { calculateTotalSantaCost } from "./santa_tiling_problem";
 
 function showHelp() {
   console.log("Usage:");
-  console.log("npx ts-node santa_tilling_problem.ts lenght width m2price");
-  console.log("where lenght, width, m2price are numbers");
+  console.log("npx ts-node cli.ts <lenght> <width> <m2price>");
+  console.log("where <lenght>, <width>, <m2price> are numbers");
 }
 
 // Get command line arguments and validate
@@ -29,6 +29,10 @@ if (isNaN(lenght) || isNaN(width) || isNaN(m2price)) {
 // Calculate and display total Santa tiling price
 try {
   const result = calculateTotalSantaCost(lenght, width, m2price);
+  if (result === 0) {
+    console.log("Your tiles are free!");
+    process.exit(0);
+  }
   console.log("Total price: ", result);
 } catch (error) {
   if (error instanceof Error) {
