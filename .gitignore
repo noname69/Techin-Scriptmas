@@ -33,3 +33,18 @@ yarn-error.log*
 /.svelte-kit
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# TypeScript
+*.tsbuildinfo
+
+# Tests
+tests/
+__tests__/
+*.spec.ts
+*.test.ts
+*.spec.js
+*.test.js
+
+# Editor files
+.vscode/
+.DS_Store
