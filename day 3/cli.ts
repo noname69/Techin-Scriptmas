@@ -4,7 +4,7 @@ import { trimMiddleDigits } from "./number-trimming_magic";
  */
 function showHelp() {
   console.log("Usage:");
-  console.log("   npx ts-node number-trimming_magic.ts <number>");
+  console.log("   npx ts-node cli.ts <number>");
   console.log("Where <number> is a 4 digit number");
 }
 
