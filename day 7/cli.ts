@@ -1,3 +1,5 @@
+import seatsCalculation from "./christmas_concerts_seating_plan";
+
 function showHelp() {
   console.log("Usage:");
   console.log("   npx ts-node cli.ts <rows> <seats>");
@@ -13,6 +15,12 @@ function main() {
     if (args.length < 2) {
       throw new Error("Need 3 arguments. <rows> <seats>");
     }
+
+    const rows = Number(args[0]);
+    const seats = Number(args[1]);
+
+    const totalSeats = seatsCalculation(rows, seats);
+    console.log("Total number of seats:", totalSeats);
   } catch (error) {
     if (error instanceof Error) {
       console.error("Error:", error.message);
