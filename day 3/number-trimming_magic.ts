@@ -5,12 +5,10 @@
  * @throws Error if input is not a 4-digit number
  */
 
-function trimMiddleDigits(number: string): string {
+export function trimMiddleDigits(number: string): string {
   if (!/^\d{4}$/.test(number)) {
     throw new Error("Input must be a 4-digit number");
   }
 
   return number.charAt(0) + number.charAt(3);
 }
-
-export { trimMiddleDigits };
