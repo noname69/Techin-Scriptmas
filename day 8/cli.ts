@@ -1,8 +1,10 @@
+import { CLPatternGenerator } from "./christmas_lights_pattern_generator";
+import { addBorder } from "./helper";
+
 function showHelp() {
   console.log("Usage:");
-  console.log("   npx ts-node cli.ts <rows> <seats>");
-  console.log("Where <rows> number of total rows");
-  console.log("      <seats> number of seats in first row");
+  console.log("   npx ts-node cli.ts <N>");
+  console.log("Where <N> pattern size NxN");
 }
 
 function main() {
@@ -10,10 +12,22 @@ function main() {
     const args = process.argv.slice(2);
 
     // Validation of number of arguments
-    if (args.length < 2) {
-      throw new Error("Need 3 arguments. <rows> <seats>");
+    if (args.length < 1 || args.length > 1) {
+      throw new Error("Need 1 argument. <N>");
     }
 
+    const N = Number(args[0]);
+
+    if (Number.isNaN(N)) {
+      throw new Error("N must be a number");
+    }
+
+    const pattern = CLPatternGenerator(N);
+    const bordered = addBorder(pattern, "*");
+
+    for (const row of bordered) {
+      console.log(row); // print one row as a single line
+    }
   } catch (error) {
     if (error instanceof Error) {
       console.error("Error:", error.message);
