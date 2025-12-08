@@ -21,7 +21,7 @@ coverage
 .vscode/
 
 allinone/
-
+cli/
 
 # npm and yarn debug logs
 npm-debug.log*
