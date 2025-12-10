@@ -1,4 +1,4 @@
-interface ValidateNumberOptions {
+interface NumberValidatorOptions {
   integer?: boolean;
   positive?: boolean;
   min?: number;
@@ -14,9 +14,9 @@ interface ValidateNumberOptions {
  * @throws {Error} If the number is not valid.
  */
 
-export function NumberValidator(
+export function numberValidator(
   raw: number | string | undefined,
-  options: ValidateNumberOptions = {}
+  options: NumberValidatorOptions = {}
 ): number {
   const name = options.name || "Number";
 
