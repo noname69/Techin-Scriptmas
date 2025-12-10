@@ -5,19 +5,16 @@ interface CountdownResult {
 
 /**
  * Function calculates the total minutes and total seconds passed since midnight
- * @param hours 
- * @param minutes 
+ * @param hours hours on the clock
+ * @param minutes minutes on the clock
  * @returns total minutes and total seconds since midnight
- * @throws Error if inputs are invalid
  */
 
 export function midnightClockCountdown(
   hours: number,
   minutes: number
 ): CountdownResult {
-  if (!Number.isSafeInteger(hours) || !Number.isSafeInteger(minutes)) {
-    throw new Error("Hours and minutes must be integers");
-  }
+  // Validate arguments
   if (hours < 0 || hours > 23) {
     throw new Error("Hours must be between 0 and 23");
   }
