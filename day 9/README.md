@@ -1,4 +1,4 @@
-## Santa’s Perfect Christmas Melon
+# Santa’s Perfect Christmas Melon
 Santa is at the North Pole Christmas Market looking for the **perfect Christmas melon** to take on his holiday journey. All melons are lined up in order, each with a known weight.
 
 Santa wants to choose the melon whose weight is closest to the **average weight of all melons** — not too heavy, not too light, but just right for Christmas magic!

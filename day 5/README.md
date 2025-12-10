@@ -4,8 +4,6 @@ Santa Claus is preparing for his Christmas Eve flight, but before the sleigh lif
 
 Your task is to help Santa launch his sleigh!
 
----
-
 ## Task Requirements
 
 Create a program that:
@@ -13,18 +11,16 @@ Create a program that:
 1. Starts a countdown from **10 down to 0**.
 2. Each second:
 
-- Clears the screen.
-- Displays the current number using the ASCII art from the `DIGITS` array.
-- Shows a festive message, such as:
-  - "Santa is preparing…"
-  - "Reindeer are buckling up…"
-  - "Sleigh warming up…"
+* Clears the screen.
+* Displays the current number using the ASCII art from the `DIGITS` array.
+* Shows a festive message, such as:
+  * "Santa is preparing…"
+  * "Reindeer are buckling up…"
+  * "Sleigh warming up…"
 
 3. When the countdown reaches 0, display:
 
-SANTA’S SLEIGH IS LAUNCHING!
-
----
+* SANTA’S SLEIGH IS LAUNCHING!
 
 ## Expected Output Example (simplified)
 
@@ -39,8 +35,6 @@ And finally:
 <ASCII art for number 0>
 
 🎅✨SANTA’S SLEIGH IS LAUNCHING!✨🎅
-
----
 
 ## Digit Array
 

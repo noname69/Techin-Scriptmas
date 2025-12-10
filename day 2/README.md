@@ -1,4 +1,4 @@
-## Santa’s Midnight Clock Countdown
+# Santa’s Midnight Clock Countdown
 Santa’s magical workshop clock shows **x hours** and **y minutes**. Write a program that calculates:
 
 - **m** — how many minutes have passed since midnight
