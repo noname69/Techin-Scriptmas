@@ -15,12 +15,16 @@ interface ValidateNumberOptions {
  */
 
 export function NumberValidator(
-  raw: number | string,
+  raw: number | string | undefined,
   options: ValidateNumberOptions = {}
 ): number {
   const name = options.name || "Number";
 
   const num = typeof raw === "string" ? Number(raw.trim()) : raw;
+
+  if (num === undefined) {
+    throw new Error(`${name} must be a number.`);
+  }
 
   // Validate the number
   if (!Number.isFinite(num)) {
