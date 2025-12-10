@@ -15,34 +15,37 @@ interface ValidateNumberOptions {
  */
 
 export function NumberValidator(
-  raw: number,
+  raw: number | string,
   options: ValidateNumberOptions = {}
 ): number {
   const name = options.name || "Number";
+
+  const num = typeof raw === "string" ? Number(raw.trim()) : raw;
+
   // Validate the number
-  if (!Number.isFinite(raw)) {
+  if (!Number.isFinite(num)) {
     throw new Error(`${name} must be a number.`);
   }
 
   // Validate the integer
-  if (options.integer && !Number.isSafeInteger(raw)) {
+  if (options.integer && !Number.isSafeInteger(num)) {
     throw new Error(`${name} must be an integer.`);
   }
 
   // Validate the positive
-  if (options.positive && raw <= 0) {
+  if (options.positive && num <= 0) {
     throw new Error(`${name} must be positive.`);
   }
 
   // Validate the min
-  if (options.min && raw < options.min) {
+  if (options.min && num < options.min) {
     throw new Error(`${name} must be ≥ ${options.min}.`);
   }
 
   // Validate the max
-  if (options.max && raw > options.max) {
+  if (options.max && num > options.max) {
     throw new Error(`${name} must be ≤ ${options.max}.`);
   }
 
-  return raw;
+  return num;
 }
