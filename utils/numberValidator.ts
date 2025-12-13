@@ -37,7 +37,7 @@ export function numberValidator(
   }
 
   // Validate the positive
-  if (options.positive && num <= 0) {
+  if (options.positive && num < 0) {
     throw new Error(`${name} must be positive.`);
   }
 
