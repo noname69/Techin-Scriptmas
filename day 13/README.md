@@ -2,11 +2,11 @@
 
 At the North Pole Christmas School, Santa keeps a magical student list. He wants to know **how many students are girls**, based on a simple Christmas rule:
 
-**Girls’ first names end with the letter ‘a’ Boys’ names do not**
+_**Girls’ first names end with the letter ‘a’ Boys’ names do not**_
 
 You are given the list of students in the form:
 
-**LastName FirstName**
+_**LastName FirstName**_
 
 written exactly like Santa keeps them in his book.
 
@@ -79,6 +79,7 @@ npx ts-node cli.ts <filename>
 ```
 
 ### Expected output
+
 ```typescript
 3
 Mikalauskaitė Aušra
