@@ -23,7 +23,7 @@ function main() {
     }
 
     const pattern = CLPatternGenerator(N);
-    const bordered = addBorder(pattern, "*");
+    const bordered = addBorder(pattern, "#");
 
     for (const row of bordered) {
       console.log(row); // print one row as a single line
