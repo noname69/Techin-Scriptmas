@@ -57,7 +57,17 @@ Each inner array represents one anagram family created by the elves.
 npx ts-node cli.ts <filename>
 ```
 
-### Test file example
+### Arguments
+
+`<filename>` - name of the file with words
+
+### Example
+
+```bash
+npx ts-node cli.ts test.in
+```
+
+### File example
 
 ```bash
 evil live veil vile

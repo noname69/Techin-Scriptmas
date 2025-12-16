@@ -34,6 +34,7 @@ You may:
 ```bash
 npx ts-node cli.ts <x> <y> <z>
 ```
+
 ### Arguments
 
 - `<x>` - price one

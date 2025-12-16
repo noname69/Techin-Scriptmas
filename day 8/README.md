@@ -40,3 +40,13 @@ Output for N = 6
 ```
 
 (Spaces are for readability.)
+
+## Usage
+
+### CLI
+
+```bash
+npx ts-node cli.ts <N>
+```
+
+Where `<N>` is the size of the pattern

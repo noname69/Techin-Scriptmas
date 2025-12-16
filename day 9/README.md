@@ -32,11 +32,22 @@ Print on one line:
 
 Input:
 
-```
+```bash
 4
 4 3 7 8
 ```
+
 Output:
-```
+
+```bash
 1 4.00
 ```
+
+## Usage
+
+### CLI
+
+```bash
+npx ts-node cli.ts
+```
+

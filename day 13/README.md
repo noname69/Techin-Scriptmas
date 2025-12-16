@@ -66,6 +66,16 @@ To use names from file:
 npx ts-node cli.ts <filename>
 ```
 
+### Arguments
+
+`<filename>` - name of the file with students names
+
+### Example
+
+```bash
+npx ts-node cli.ts test.in
+```
+
 ### Test file example
 
 ```bash
@@ -78,9 +88,9 @@ npx ts-node cli.ts <filename>
   Bruzgaitė Akvilė
 ```
 
-### Expected output
+### Output
 
-```typescript
+```bash
 3
 Mikalauskaitė Aušra
 Stakėnaitė Ieva
