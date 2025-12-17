@@ -1,0 +1,78 @@
+# Santa’s Magic Juice Bottling Challenge
+
+Santa and the elves have made a huge amount of **Magic Holiday Juice** from freshly harvested apples. They need your help to figure out how to bottle the juice correctly.
+
+The juice can be filled into:
+
+- 5-liter festive barrels
+- 2-liter elf jugs
+- 1-liter reindeer flasks
+
+Each elf bottles juice using this rule:
+
+1. Fill as many 5-liter barrels as possible
+2. Then fill 2-liter jugs
+3. Put the remaining juice into 1-liter flasks
+
+## Your Task
+
+Write a program that:
+
+- Stores the juice amounts in an array or object.
+- For each elf, calculates how many 5L, 2L, and 1L containers they will use.
+- Prints the results in the format:
+
+```bash
+fiveLiter twoLiter oneLiter
+```
+
+One line per elf.
+
+## Input (given directly in code)
+
+```typescript
+// Example data
+const juiceAmounts = [45, 92, 33];
+```
+
+or
+
+```typescript
+const elves = [
+  { name: "Sparkle", liters: 45 },
+  { name: "Twinkle", liters: 92 },
+  { name: "Jingle", liters: 33 }
+];
+```
+
+## Expected Output Format
+
+For each elf:
+
+```bash
+number_of_5L_barrels number_of_2L_jugs number_of_1L_flasks
+```
+
+## Example with the given data
+
+Data:
+
+```typescript
+[45, 92, 33]
+```
+
+Output:
+
+```bash
+9 0 0
+18 1 0
+6 1 1
+```
+
+## Usage
+
+### CLI
+
+```bash
+npx ts-node cli.ts
+```
