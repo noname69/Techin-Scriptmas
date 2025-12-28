@@ -12,9 +12,11 @@ Kalėdos! Jau norim dovanų!
 Kur gi senelis?
 Kur Kalėdų senis? a-uuu?`;
 
-function main() {
-  const lines = inputLines.split("\n");
-
+/* Convert lines to blocks
+ * @param lines - array of lines
+ * @returns array of blocks
+ */
+function converteLinesToBlocks(lines: string[]) {
   const resultLines: string[] = [];
 
   // split lines into blocks
@@ -34,11 +36,20 @@ function main() {
     }
   }
 
-  // find the longest line, this will be the y axis
-  const yAxis = Math.max(...resultLines.map((l) => l.length));
+  return resultLines;
+}
 
-  // print lines
-  resultLines.forEach((line, i) => {
+/* Print tree
+ * @param lines - array of lines
+ */
+function printTree(lines: string[]): void {
+  const yAxis = Math.max(...lines.map((l) => l.length));
+
+  if (yAxis > 255) {
+    throw new Error("Input lines are too long.");
+  }
+
+  lines.forEach((line, i) => {
     const isLeftAligned = i % 2 === 0;
 
     if (isLeftAligned) {
@@ -49,6 +60,31 @@ function main() {
       console.log(" ".repeat(rightPadding) + line);
     }
   });
+}
+
+/* Main function */
+function main() {
+  try {
+    if (!inputLines) {
+      throw new Error("Input lines are not defined.");
+    }
+    const lines = inputLines.split("\n");
+
+    if (lines.length > 100) {
+      throw new Error("Input lines are too long.");
+    }
+    const resultLines = converteLinesToBlocks(lines);
+
+    printTree(resultLines);
+  } catch (error) {
+    //Handle errors
+    if (error instanceof Error) {
+      console.error("Error:", error.message);
+    } else {
+      console.error("Enexpected error occurred.");
+    }
+    process.exit(1);
+  }
 }
 
 main();
